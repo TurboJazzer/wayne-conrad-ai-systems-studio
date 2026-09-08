@@ -225,6 +225,7 @@
         <sc-if value="{{ leadFormOpen }}" hint-placeholder-val="{{ true }}">
           <form name="lead-magnet" method="POST" data-netlify="true" onSubmit="{{ submitLeadMagnet }}" style="display:flex;gap:8px;flex-wrap:wrap">
             <input type="hidden" name="form-name" value="lead-magnet">
+            <input type="text" name="first-name" required placeholder="First name" style="border:1px solid #d8e0f3;border-radius:8px;padding:12px 14px;font-size:14px;color:#0d1b4b;min-width:130px" style-focus="outline:none;border-color:#2d5be3;box-shadow:0 0 0 3px rgba(45,91,227,0.15)">
             <input type="email" name="email" required placeholder="you@company.com" style="border:1px solid #d8e0f3;border-radius:8px;padding:12px 14px;font-size:14px;color:#0d1b4b;min-width:200px" style-focus="outline:none;border-color:#2d5be3;box-shadow:0 0 0 3px rgba(45,91,227,0.15)">
             <button type="submit" style="font-size:14px;font-weight:600;color:#ffffff;background:#0d1b4b;border:none;padding:12px 20px;border-radius:8px;cursor:pointer;white-space:nowrap" style-hover="background:#16266b">Send me the calculator</button>
           </form>
@@ -247,6 +248,7 @@
         <sc-if value="{{ matrixFormOpen }}" hint-placeholder-val="{{ true }}">
           <form name="lead-magnet-matrix" method="POST" data-netlify="true" onSubmit="{{ submitMatrix }}" style="display:flex;gap:10px;flex-wrap:wrap">
             <input type="hidden" name="form-name" value="lead-magnet-matrix">
+            <input type="text" name="first-name" required placeholder="First name" style="border:1px solid #d8e0f3;border-radius:8px;padding:12px 14px;font-size:14px;color:#0d1b4b;min-width:130px" style-focus="outline:none;border-color:#2d5be3;box-shadow:0 0 0 3px rgba(45,91,227,0.15)">
             <input type="email" name="email" required placeholder="Enter your business email" style="border:1px solid #d8e0f3;border-radius:8px;padding:12px 14px;font-size:14px;color:#0d1b4b;min-width:220px" style-focus="outline:none;border-color:#2d5be3;box-shadow:0 0 0 3px rgba(45,91,227,0.15)">
             <button type="submit" style="font-size:14px;font-weight:600;color:#ffffff;background:#2d5be3;border:none;padding:12px 20px;border-radius:8px;cursor:pointer;white-space:nowrap" style-hover="background:#1f47c4">Get Free PDF</button>
           </form>
