@@ -1,5 +1,5 @@
 /**
- * Wayne Conrad Advisory — site-wide cookie consent.
+ * Wayne Conrad Advisory: site-wide cookie consent.
  * Include this ONE file on every page, right before </body>:
  *   <script src="/cookie-consent.js" defer></script>
  *
@@ -13,7 +13,7 @@
  * - Exposes window.showCookieBanner() so a page can add a "Manage Cookies"
  *   link/button anywhere (footer, privacy page, etc.) that reopens it.
  *
- * To change the GA/GTM IDs, edit GA_ID and GTM_ID below — one place,
+ * To change the GA/GTM IDs, edit GA_ID and GTM_ID below. One place,
  * applies to every page that includes this script.
  */
 (function () {
