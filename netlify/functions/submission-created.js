@@ -3,7 +3,7 @@
 // Requires env var RESEND_API_KEY (Site settings > Environment variables).
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
-const FROM_EMAIL = "Wayne Conrad Advisory <hello@wayneconradadvisory.com>";
+const FROM_EMAIL = "Wayne Conrad Advisory <wayne@wayneconrad.com>";
 const SITE_URL = "https://wayne-conrad-ai-systems-studio.netlify.app";
 
 const PDF_BY_FORM = {
