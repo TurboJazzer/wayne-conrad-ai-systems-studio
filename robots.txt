@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wayne-conrad-ai-systems-studio.netlify.app/sitemap.xml
