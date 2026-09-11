@@ -11,6 +11,30 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
 
 [[redirects]]
+  from = "/Terms.dc.html"
+  to = "/terms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/Privacy.dc.html"
+  to = "/privacy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/FAQ.dc.html"
+  to = "/faq"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/terms"
   to = "/Terms.dc.html"
   status = 200
