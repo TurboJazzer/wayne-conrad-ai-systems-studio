@@ -2,31 +2,60 @@
   publish = "."
   functions = "netlify/functions"
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Robots-Tag = "index, follow"
-    X-Frame-Options = "SAMEORIGIN"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
+[build.processing.html]
+  pretty_urls = false
+
+[[edge_functions]]
+  path = "/*"
+  function = "block-bots"
 
 [[redirects]]
-  from = "/Terms.dc.html"
-  to = "/terms"
-  status = 301
-  force = true
+  from = "/api/send-quote"
+  to = "/.netlify/functions/send-quote"
+  status = 200
+  [redirects.rate_limit]
+    window_limit = 10
+    window_size = 60
+    aggregate_by = ["ip", "domain"]
 
 [[redirects]]
-  from = "/Privacy.dc.html"
-  to = "/privacy"
-  status = 301
-  force = true
+  from = "/api/chat"
+  to = "/.netlify/functions/chat"
+  status = 200
+  [redirects.rate_limit]
+    window_limit = 20
+    window_size = 60
+    aggregate_by = ["ip", "domain"]
 
 [[redirects]]
-  from = "/FAQ.dc.html"
-  to = "/faq"
+  from = "/new-dell-equipment"
+  to = "/new-dell-equipment.html"
   status = 301
-  force = true
+
+[[redirects]]
+  from = "/refurbished-dell-equipment"
+  to = "/refurbished-dell-equipment.html"
+  status = 301
+
+[[redirects]]
+  from = "/faq"
+  to = "/faq.html"
+  status = 301
+
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 301
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 301
+
+[[redirects]]
+  from = "/resources"
+  to = "/resources.html"
+  status = 301
 
 [[redirects]]
   from = "/index.html"
@@ -35,20 +64,21 @@
   force = true
 
 [[redirects]]
-  from = "/terms"
-  to = "/Terms.dc.html"
+  from = "/sitemap_index.xml"
+  to = "/sitemap.xml"
   status = 200
 
 [[redirects]]
-  from = "/privacy"
-  to = "/Privacy.dc.html"
+  from = "/favicon.ico"
+  to = "/favicon.png"
   status = 200
 
-[[redirects]]
-  from = "/faq"
-  to = "/FAQ.dc.html"
-  status = 200
-
-[[edge_functions]]
-  path = "/*"
-  function = "block-bots"
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
